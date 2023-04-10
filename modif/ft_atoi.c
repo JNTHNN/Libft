@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	int		i;
+	long		i;
 	long	resu;
 	int		signe;
 
@@ -33,10 +33,10 @@ int	ft_atoi(const char *str)
 			i++;
 		}
 	}
-	if (str[i] == '+')
-		i++;
-	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+	while (str[i] != '\0' && ft_isdigit(str[i]) == 1)
+	{
 		resu = (resu * 10) + (str[i] - '0');
 		i++;
+	}
 	return (resu * signe);
 }	

@@ -14,6 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
+	char	*str;
+
+	str = (char *)s;
+	while (*str != (char)c)
+	{
+		if (*str == '\0')
+			return (NULL);
+		str++;
+	}
+	return (str);
+}
+/*
+char	*ft_strchr(const char *s, int c)
+{
 	int	i;
 
 	i = 0;
@@ -21,13 +35,13 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char*)&s[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
+*/
 
 //#include <string.h>
 //#include <stdio.h>
