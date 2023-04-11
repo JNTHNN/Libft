@@ -6,12 +6,11 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:31:10 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/06 16:49:39 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/11 15:04:43 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char    *ft_strjoin(char const *s1, char const *s2)
 {
@@ -38,7 +37,7 @@ char    *ft_strjoin(char const *s1, char const *s2)
 	s[i] = '\0';
 	return ((char *)s1 + *s);
 }
-
+/*
 int	main(void)
 
 {
@@ -52,3 +51,4 @@ int	main(void)
 	printf("%s\n", result);
 
 }
+*/
