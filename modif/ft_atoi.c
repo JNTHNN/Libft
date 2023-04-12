@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:55:01 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/11 18:16:17 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/12 10:19:48 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 			signe = -1;
 		i++;
 	}
-	while (str[i] != '\0' && ft_isdigit(str[i]) == 1)
+	while (!str[i] && ft_isdigit(str[i]) == 1)
 	{
 		resu = (resu * 10) + (str[i] - '0');
 		i++;
