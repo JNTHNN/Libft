@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 14:30:59 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/13 12:30:46 by jgasparo         ###   ########.fr       */
+/*   Created: 2023/04/13 14:06:51 by jgasparo          #+#    #+#             */
+/*   Updated: 2023/04/13 14:27:32 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	space_left;
-	size_t	copied;
+	int i;
+	size_t	s_len;
+	size_t	set_len;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	space_left = dstsize - dst_len - 1;
-	copied = ft_strlcpy(dst + dst_len, src, space_left);
-	if (dstsize <= dst_len)
-		return (src_len + dstsize);
-	return (dst_len + copied);
+	i = 0;
+	s_len = ft_strlen(s1);
+	set_len = ft_strlen(set);
+	if (!s1)
+		return (NULL);
+	while(s_len > 0)
+	{
+		if (s1[s_len] == set[set_len])
+		{
+			s_len--;
+			set_len--;
+		}
+		
+	}
 }

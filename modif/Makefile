@@ -6,7 +6,7 @@
 #    By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 11:07:53 by jgasparo          #+#    #+#              #
-#    Updated: 2023/04/12 11:07:54 by jgasparo         ###   ########.fr        #
+#    Updated: 2023/04/13 11:14:22 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,6 @@ ft_strrchr.c \
 ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
-testmemcmp.c \
-testmemset.c
 
 OBJ = ${SRC:.c=.o}
 
