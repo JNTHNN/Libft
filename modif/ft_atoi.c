@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:55:01 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/12 10:19:48 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/13 10:06:50 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(const char *str)
 {
 	long	i;
-	long	resu;
+	long long	resu;
 	int		signe;
 
 	i = 0;
@@ -23,8 +23,8 @@ int	ft_atoi(const char *str)
 	resu = 0;
 	while (str[i] != '\0')
 		i++;
-	//while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
-	while (ft_isprint(str[i] == 0))
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+	//while (ft_isprint(str[i] == 0))
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 	{

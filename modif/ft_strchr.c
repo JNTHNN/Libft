@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 12:31:11 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/12 10:34:53 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/13 10:49:35 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ char	*ft_strchr(const char *s, int c)
 //fonction qui permet de rechercher le premier c
 //(converti en char) dans la string s, 
 //si c = '\0' la fonc trouve le '\0' final
-// * returne la valeur : un pointeur sur le char localise ou NULL si le char n'y est pas
+// * returne la valeur : un pointeur sur le char localise ou 
+// NULL si le char n'y est pas
 //*/

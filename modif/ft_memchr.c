@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 16:44:26 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/12 10:16:41 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/13 10:54:50 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char   *str;
+	unsigned char	*str;
 
 	str = (unsigned char *)s;
 	while (n != 0)
