@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 14:06:51 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/13 14:27:32 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/14 09:30:26 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 			s_len--;
 			set_len--;
 		}
-		
 	}
+	return (0);
 }
