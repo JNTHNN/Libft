@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:38:56 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/07 10:38:29 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/14 10:27:46 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	len;
+	size_t	len_src;
 
 	i = 0;
-	len = ft_strlen(src);
-	while (i < dstsize - 1 && src[i] != '\0')
+	len_src = ft_strlen(src);
+	if (dstsize == 0)
+		return (len_src);
+	while (i < dstsize - 1 && src[i] != '\0' && dstsize != 0)
 	{
 		if (i > dstsize)
 			return (0);
@@ -28,5 +30,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	}
 	dst[i] = '\0';
-	return (len);
+	return (len_src);
 }

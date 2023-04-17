@@ -6,39 +6,42 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:31:10 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/06 16:49:39 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/13 11:30:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*s;
-	int		i;
-	int		y;
-	int		size;
+	char	*s3;
+	size_t	i;
+	size_t	j;
 
-	size = sizeof(s1) + sizeof(s2);
-	s = malloc(size);
 	i = 0;
-	y = sizeof(s1);
-	if (size == 0)
-		return (s);
-	while (i < size)
+	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	s3 = (char *)malloc(sizeof(*s3) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!s3)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		while (s2[i] != '\0')
-		{
-			s[y] = s2[i];
-			y++;
-			i++;
-		}
+		s3[i] = s1[i];
+		i++;
 	}
-	s[i] = '\0';
-	return ((char *)s1 + *s);
+	while (s2[j] != '\0')
+	{
+		s3[i] = s2 [j];
+		i++;
+		j++;
+	}
+	s3[i] = '\0';
+	return (s3);
 }
+	
 
+/*
 int	main(void)
 
 {
@@ -52,3 +55,4 @@ int	main(void)
 	printf("%s\n", result);
 
 }
+*/

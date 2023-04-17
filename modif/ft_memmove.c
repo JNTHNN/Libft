@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 16:42:28 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/07 09:16:00 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/14 11:43:09 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *buffersrc;
-	unsigned char *bufferdst;
+	unsigned char	*from;
+	unsigned char	*to;
 
-	buffersrc = (unsigned char *)src;
-	bufferdst = (unsigned char *)dst;
-	if (bufferdst < buffersrc)
+	from = (unsigned char *)src;
+	to = (unsigned char *)dst;
+	if (to == from && len == 0)
+		return (dst);
+	if (to < from)
 		while (len --)
-			*bufferdst++ = *buffersrc++;
-	if (bufferdst > buffersrc)
+			*to++ = *from++;
+	if (to > from)
 		while (len --)
-			bufferdst[len] = buffersrc[len];
-	return (dst);	
+			to[len] = from[len];
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 12:27:26 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/07 10:27:51 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/12 10:21:40 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*cs;
 
 	i = 0;
-	cs = s;
+	cs = (char *)s;
 	while (i < n && n != 0)
 	{	
 		cs[i] = 0;

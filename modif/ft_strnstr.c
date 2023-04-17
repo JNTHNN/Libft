@@ -6,37 +6,12 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 16:49:15 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/07 09:26:36 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/12 11:00:48 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	int		i;
-	int		j;
-	char	*res;
 
-	i = 0;
-	res = (char *)haystack;
-	if (*needle == 0)
-		return (res);
-	while (haystack[i])
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && needle[j] && (size_t)(i + j) < len)
-			j++;
-		if (needle[j] == 0)
-		{
-			res += i;
-			return (char *)(res);
-		}
-		i++;
-	}
-	return ((char *)NULL);
-}
-*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
@@ -47,7 +22,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return ((char *)haystack);
 	n = ft_strlen(needle);
 	i = 0;
-	while (haystack[i] != '\0' && i <= len - n)
+	while (haystack[i] != '\0' && i <= len - n && len != 0)
 	{
 		j = 0;
 		while (needle[j] != '\0' && haystack[i + j] == needle[j])
