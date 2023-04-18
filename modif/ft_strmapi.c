@@ -6,14 +6,14 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:26:53 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/18 11:39:07 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:18:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
-{
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+/*{
 	unsigned int    i;
 	char            *str;
 
@@ -28,4 +28,4 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		}	
 	}
 	return (str);
-}
+}*/

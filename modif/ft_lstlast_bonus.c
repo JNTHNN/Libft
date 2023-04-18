@@ -1,12 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/18 11:59:15 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/18 12:47:21 by jgasparo         ###   ########.fr       */
+/*   Created: 2023/04/18 14:02:58 by jgasparo          #+#    #+#             */
+/*   Updated: 2023/04/18 16:02:05 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+t_list	*ft_lstlast(t_list *lst)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = ft_lstsize(lst);
+	if (lst == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (lst->content);
+}
