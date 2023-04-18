@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 14:06:51 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/14 09:30:26 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/18 10:47:58 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,18 @@ static int	ft_isset(char c, char const *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int 	i;
+	int		i;
 	size_t	start;
 	size_t	end;
 
 	i = 0;
 	start = 0;
 	end = ft_strlen(s1);
-
-	if (!s1 || s1 == 0 || set == 0)
+	if (!s1 || !set)
 		return (NULL);
-	while (s1[start] && ft_isset(s1[start], set))
+	while (s1[start] && ft_isset(s1[start], set) == 1)
 		start++;
-	while (end > start && ft_isset(s1[end - 1], set))
+	while (end > start && ft_isset(s1[end - 1], set) == 1)
 		end--;
 	str = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!str)

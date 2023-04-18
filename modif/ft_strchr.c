@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 12:31:11 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/14 11:24:44 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/18 10:41:02 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	*str;
-	char 	ch;
+	char	ch;
 
 	str = (char *)s;
 	ch = c;
