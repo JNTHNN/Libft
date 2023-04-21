@@ -13,19 +13,19 @@
 #include "libft.h"
 
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-/*{
-	unsigned int    i;
-	char            *str;
-
+{
+	unsigned int	i;
+	char			*str;
+	
 	i = 0;
-	str = (char *)malloc(sizeof(sizeof(char) * ft_strlen(s) + 1));
-	if (s && f)
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!s || !f || !str)
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		while (s[i] != '\0')
-		{
-			f(i, &s[i]);
-			i++;
-		}	
+		str[i] = f(i, s[i]);
+		i++;
 	}
+	str[i] = '\0';
 	return (str);
-}*/
+}
