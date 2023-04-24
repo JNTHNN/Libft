@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:59:15 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/24 14:37:59 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:42:29 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_count(int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (n != 0)

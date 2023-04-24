@@ -6,13 +6,13 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 16:23:45 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/19 17:32:36 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:43:19 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void(*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 

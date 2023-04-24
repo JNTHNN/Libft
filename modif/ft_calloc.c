@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 16:52:28 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/18 10:40:37 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:42:06 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	total_size = nmemb * size;
 	ptr = malloc(total_size);
-	if (nmemb > SIZE_MAX / size) 
+	if (nmemb > SIZE_MAX / size)
 	{
 		return (NULL);
 	}
