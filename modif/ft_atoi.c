@@ -6,11 +6,21 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:55:01 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/18 16:09:43 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:09:41 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_secure(int i)
+{
+	if (i < INT_MIN)
+		return (0);
+	if (i > INT_MAX)
+		return (-1);
+	else
+		return (i);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -35,12 +45,8 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		resu = resu * 10 + (str[i] - '0');
-		i++;
-		if (resu * signe < INT_MIN)
-			return (0);
-		if (resu * signe > INT_MAX)
-			return (-1);
+		resu = resu * 10 + (str[i++] - '0');
+		ft_secure(resu * signe);
 	}
 	return (resu * signe);
 }	

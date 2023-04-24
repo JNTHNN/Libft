@@ -6,7 +6,7 @@
 #    By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 11:07:53 by jgasparo          #+#    #+#              #
-#    Updated: 2023/04/18 11:29:10 by jgasparo         ###   ########.fr        #
+#    Updated: 2023/04/24 14:29:34 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,8 +45,19 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_striteri.c \
+ft_lstnew_bonus.c \
+ft_lstsize_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstclear_bonus.c \
+ft_split.c \
+ft_itoa.c \
 
 OBJ = ${SRC:.c=.o}
+
+OBJ_BNS = ${BNS:.c=.o}
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -59,6 +70,7 @@ all: $(NAME)
 $(NAME):	$(OBJ)
 	$(LIB) $(OBJ)
 
+
 clean:
 	@$(REMOVE) $(OBJ)
 
@@ -67,4 +79,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
