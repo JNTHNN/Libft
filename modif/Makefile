@@ -45,19 +45,20 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 ft_striteri.c \
-ft_lstnew_bonus.c \
+ft_split.c \
+ft_itoa.c \
+
+SRC_B = ft_lstnew_bonus.c \
 ft_lstsize_bonus.c \
 ft_lstlast_bonus.c \
 ft_lstadd_front_bonus.c \
 ft_lstadd_back_bonus.c \
 ft_lstdelone_bonus.c \
 ft_lstclear_bonus.c \
-ft_split.c \
-ft_itoa.c \
 
 OBJ = ${SRC:.c=.o}
 
-OBJ_BNS = ${BNS:.c=.o}
+OBJ_B = ${SRC_B:.c=.o}
 
 CFLAGS = -Wall -Werror -Wextra
 
@@ -70,9 +71,11 @@ all: $(NAME)
 $(NAME):	$(OBJ)
 	$(LIB) $(OBJ)
 
+bonus: $(OBJ_B)
+	$(LIB) $(NAME) $(OBJ_B)
 
 clean:
-	@$(REMOVE) $(OBJ)
+	@$(REMOVE) $(OBJ) $(OBJ_B)
 
 fclean:	clean
 	@$(REMOVE) $(NAME)

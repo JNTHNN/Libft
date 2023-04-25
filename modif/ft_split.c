@@ -12,28 +12,60 @@
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+static int count_substr(char const *s, char c)
 {
-	char	*str;
-	int		i;
+	int	str;
+	size_t i;
 
 	i = 0;
-	if (!s || !c)
+	str = 0;
+	while(s[i] != '\0')
+	{
+		while (s[i] ==c && s[i])
+			i++;
+		if (s[i] != c && s[i])
+			i++;
+	}
+	str += 1;
+	return (str);
+}
+
+static size_t to_sep(char const *s, char c)
+{
+	size_t i;
+
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+		i++;
+	return (i);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**str;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+
+	i = 0;
+	j = 0;
+	str = malloc(sizeof(char *) * ( count_substr(s,c) + 1));
+	if (!s || !str)
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c || s[i] == '\0')
-			i++;
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (s[i] != c || s[i] != '\0')
 		{
-			str = malloc(sizeof(char) * i + 1);
-//			if (!str)
-//				free(str);
-//			str[i] = s[i];
-//			ft_substr(s[i], i, i + 1);
-			i++;
+			str[j] = malloc(sizeof(char *) * (to_sep(&s[i], c) + 1));
+			k = 0;
+			while (s[i] != c && s[i] != '\0')
+				str[j][k++] = s[i++];
+			str[j][k] = '\0';
+			j++;
 		}
+		while (s[i] == c && s[i])
+			i++;
 	}
-	str[i] = '\0';
-	return (NULL);
+	str[j] = '\0';
+	return (str);
 }
