@@ -6,12 +6,12 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:58:55 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/24 14:28:22 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/25 09:56:46 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 char	**ft_split(char const *s, char c)
 {
 	char	*str;
@@ -37,3 +37,4 @@ char	**ft_split(char const *s, char c)
 	str[i] = '\0';
 	return (NULL);
 }
+*/
