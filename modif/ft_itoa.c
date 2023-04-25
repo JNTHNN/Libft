@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:59:15 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/24 14:42:29 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/25 11:07:29 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,65 @@ static int	ft_count(int n)
 	int	count;
 
 	count = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n *= -1;
+		count++;
+
+	}
 	while (n != 0)
 	{
-		if (n < 0)
-			count--;
-		else
-			count++;
+		n /= 10;
+		count++;
 	}
 	return (count);
 }
 
+
+
+
+/*static int	ft_secure(int i)
+{
+	if (i < INT_MIN)
+		return (0);
+	if (i > INT_MAX)
+		return (-1);
+	else
+		return (i);
+}
+*/
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	int		len;
+	long int	nb;
+
+	nb = n;
+	len = ft_count(nb);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (nb == 0)
+		str[0] = '0';
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	while (nb > 0)
+	{
+		str[len - 1] = (nb % 10) + '0';
+		len--;
+		nb /= 10;
+	}
+	return (str);
+}
+
+/*
 char	*ft_itoa(int n)
 {
 	char		*str;
@@ -50,3 +99,12 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+
+	if (nb == -2147483648)
+	{
+		str[0] = '-';
+		str[1] = '2';
+		nb = 147483648;
+	}
+*/
