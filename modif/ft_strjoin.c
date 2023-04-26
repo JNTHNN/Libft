@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:31:10 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/24 13:48:17 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:07:40 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s3[i] = '\0';
 	return (s3);
 }
-
-/*
-int	main(void)
-
-{
-	char	*result;
-
-	char *s1 = "Ok ";
-	char *s2 = "Super";
-
-	result = ft_strjoin(s1, s2);
-
-	printf("%s\n", result);
-
-}
-*/

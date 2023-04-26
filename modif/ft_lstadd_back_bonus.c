@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 15:52:33 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/19 16:09:18 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/26 11:41:26 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (new)
 	{
-		if(!*lst)
+		if (!*lst)
 		{
 			*lst = new;
 			return ;
 		}
 		last = ft_lstlast(*lst);
-		last->next = new; 
+		last->next = new;
 	}
 }

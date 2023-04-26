@@ -6,7 +6,7 @@
 #    By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 11:07:53 by jgasparo          #+#    #+#              #
-#    Updated: 2023/04/24 14:29:34 by jgasparo         ###   ########.fr        #
+#    Updated: 2023/04/26 11:36:12 by jgasparo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ ft_lstadd_back_bonus.c \
 ft_lstdelone_bonus.c \
 ft_lstclear_bonus.c \
 ft_lstmap_bonus.c \
+ft_lstiter_bonus.c \
 
 OBJ = ${SRC:.c=.o}
 

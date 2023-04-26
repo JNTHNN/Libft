@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 16:46:32 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/14 10:16:58 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:50:25 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,21 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <string.h>
-int	main()
-{
-	//printf("%d et %d", ft_memcmp("\200","\0", 3),memcmp("\200","\0", 3));
-	    int array1 [] = { 54, 85, 20, 63, 21 };
-    int array2 [] = { 54, 85, 19, 63, 21 };
-    size_t size = sizeof( int ) * 5;
-
-    printf("%d ", memcmp( array1, array2, size));
-    printf("%d\n", ft_memcmp( array1, array2, size));       
-    printf("%d ", memcmp( array1, array1, size));
-    printf("%d\n", ft_memcmp( array1, array1, size) );       
-    printf("%d ", memcmp( array2, array1, size));
-    printf("%d\n", ft_memcmp( array2, array1, size) );  
-}
-*/

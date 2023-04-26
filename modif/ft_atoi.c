@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:55:01 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/24 14:09:41 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/26 12:21:12 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ int	ft_atoi(const char *str)
 		ft_secure(resu * signe);
 	}
 	return (resu * signe);
-}	
+}
+
 /*
 #include <stdio.h>
 int	main(int ac, char **av)
