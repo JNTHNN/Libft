@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:55:01 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/26 12:21:12 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/27 12:53:03 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int	ft_atoi(const char *str)
 	return (resu * signe);
 }
 
-/*
 #include <stdio.h>
 int	main(int ac, char **av)
 {
@@ -59,4 +58,3 @@ int	main(int ac, char **av)
 		printf("%d",ft_atoi(av[1]));
 	return (0);
 }
-*/
