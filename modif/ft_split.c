@@ -6,7 +6,7 @@
 /*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:58:55 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/27 12:39:21 by jgasparo         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:05:54 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ static char	*ft_create_word(char const *s, int start, int end)
 	word = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (word == NULL)
 		return (NULL);
-		//doit free word
 	i = 0;
 	while (start < end)
 	{
@@ -66,6 +65,20 @@ static char	*ft_create_word(char const *s, int start, int end)
 	}
 	word[i] = '\0';
 	return (word);
+}
+
+char	**ft_free(char **s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		free(s[i]);
+		i++;
+	}
+	free(s);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -82,7 +95,6 @@ char	**ft_split(char const *s, char c)
 	split = (char **)malloc(sizeof(char *) * (word_count + 1));
 	if (split == NULL || !s)
 		return (NULL);
-	// doit free split
 	while (++i < word_count)
 	{
 		while (s[j] == c)
@@ -90,10 +102,26 @@ char	**ft_split(char const *s, char c)
 		word_len = ft_word_len(&s[j], c);
 		split[i] = ft_create_word(s, j, j + word_len);
 		if (split[i] == NULL)
-			return (NULL);
-		// doit free split
+			return (ft_free(split));
 		j += word_len;
 	}
 	split[word_count] = NULL;
 	return (split);
 }
+
+int				main(void)
+{
+	char	**tab;
+	unsigned int	i;
+
+	i = 0;
+	tab = ft_split("hello,,split,,ca,  chakal,, peace", ',');
+	if (!tab[0])
+		printf("ok\n");
+	while (tab[i] != NULL)
+	{
+		printf("%s\n", tab[i]);
+		i++;
+	}
+}
+
