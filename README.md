@@ -14,7 +14,7 @@ ___
 
 ## Les Checkers
 
- - **ft_isalpha** : Vérifie si un caractère est alphabétique.
+ - [ft_isalpha](sources/is/ft_isalpha.c) : Vérifie si un caractère est alphabétique.
  - **ft_isdigit** : Vérifie si un caractère est un chiffre décimal.
  - **ft_isalnum** : Vérifie si un caractère est alphabétique ou un chiffre décimal.
  - **ft_isascii** : Vérifie si un caractère est dans la plage ASCII.
