@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 12:27:26 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/12 10:21:40 by jgasparo         ###   ########.fr       */
+/*   Created: 2023/04/06 09:04:55 by jgasparo          #+#    #+#             */
+/*   Updated: 2024/07/02 12:19:43 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-	char	*cs;
-
-	i = 0;
-	cs = (char *)s;
-	while (i < n && n != 0)
-	{	
-		cs[i] = 0;
-		i++;
-	}
+	write(fd, &c, 1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 13:55:01 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/27 16:26:58 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/07/02 12:21:45 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ int	ft_atoi(const char *str)
 {
 	long		i;
 	long int	resu;
-	int			signe;
+	int			sign;
 
 	i = 0;
-	signe = 1;
+	sign = 1;
 	resu = 0;
 	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
 		i++;
@@ -37,26 +37,16 @@ int	ft_atoi(const char *str)
 	{
 		if (str[i] == '-')
 		{
-			signe = -1;
+			sign = -1;
 			i++;
 		}
 		else if (str[i] == '+')
 			i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]))
 	{
 		resu = resu * 10 + (str[i++] - '0');
-		ft_secure(resu * signe);
+		ft_secure(resu * sign);
 	}
-	return (resu * signe);
+	return (resu * sign);
 }
-/*
-#include <stdio.h>
-int	main(int ac, char **av)
-{
-	if (ac == 2)
-		printf("%d\n",ft_atoi(av[1]));
-		printf("%d",atoi(av[1]));
-	return (0);
-}
-*/

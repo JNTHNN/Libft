@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgasparo <jgasparo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jgasparo <jgasparo@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 11:58:55 by jgasparo          #+#    #+#             */
-/*   Updated: 2023/04/27 17:05:54 by jgasparo         ###   ########.fr       */
+/*   Updated: 2024/07/02 12:22:10 by jgasparo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,20 +108,3 @@ char	**ft_split(char const *s, char c)
 	split[word_count] = NULL;
 	return (split);
 }
-
-int				main(void)
-{
-	char	**tab;
-	unsigned int	i;
-
-	i = 0;
-	tab = ft_split("hello,,split,,ca,  chakal,, peace", ',');
-	if (!tab[0])
-		printf("ok\n");
-	while (tab[i] != NULL)
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
-}
-
