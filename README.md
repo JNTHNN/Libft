@@ -48,7 +48,12 @@ ___
  - [ft_substr](sources/str/ft_substr.c) : Extrait une sous-chaine a partir d'une chaine de caractere donnee.
  - [ft_strjoin](sources/str/ft_strjoin.c) : Concatene deux chaines de caracteres.
  - [ft_strtrim](sources/str/ft_strtrim.c) : supprime les espaces blancs (ou tout autre caractere donee) au debut et a la fin d'une chaine de caracteres
- - [ft_split](sources/str/ft_split.c) : Divise une chaine de caracteres en un tableau de sous-chaines en utilisant un caractere de separation donne
+ - [ft_split](sources/str/ft_split.c) : Divise une chaine de caracteres en un tableau de sous-chaines en utilisant un caractere de separation donne.
+ - [ft_striteri](sources/str/ft_striteri.c) : Applique la fonction ’f’ à chaque caractère de la
+ chaîne de caractères transmise comme argument,
+ et en passant son index comme premier argument.
+ Chaque caractère est transmis par adresse à ’f’
+ afin d’être modifié si nécessaire.
 
 ## Écriture
  - [ft_putchar_fd](sources/put/ft_putchar_fd.c) : Ecrit un caractere sur un descripteur de fichier donne
@@ -64,24 +69,10 @@ ___
  - [ft_lstadd_back](sources/lst/ft_lstadd_back.c) : Ajoute un élement à la fin d'une liste chainée
  - [ft_lstdelone](sources/lst/ft_lstdelone.c) : Supprime un élement d'une liste chainée
  - [ft_lstclear](sources/lst/ft_lstclear.c) : Supprime l'ensemble d'une liste chainée
- - [ft_lstiter](sources/lst/ft_lstiter.c) : 
- - [ft_lstmap](sources/lst/ft_lstmap.c) :
- - [ft_striteri](sources/str/ft_striteri.c) :
-
-
-## Idées de contenu supplémentaire
-
--   Une brève introduction sur l'importance et l'utilité des bibliothèques en programmation.
--   Expliquer l'organisation de la bibliothèque LIBFT et sa structure de fichiers.
--   Fournir des exemples d'utilisation pour chaque fonction, en mettant en évidence leurs avantages et leurs cas d'utilisation.
--   Ajouter des explications détaillées sur les algorithmes ou les concepts utilisés dans certaines fonctions, montrant ainsi votre compréhension approfondie.
--   Mentionner les normes de codage et les bonnes pratiques que vous avez suivies lors de la création de la bibliothèque.
--   Inclure des témoignages ou des commentaires positifs d'autres développeurs qui ont utilisé votre bibliothèque.
--   Proposer des liens vers des tutoriels ou des guides d'utilisation pour aider les utilisateurs à tirer le meilleur parti de la bibliothèque.
--   Ajouter un guide de contribution pour encourager d'autres développeurs à contribuer à votre projet.
--   Inclure des informations sur les licences et les droits d'auteur de la bibliothèque.
--   Fournir des instructions claires sur la manière d'installer et d'utiliser la bibliothèque dans d'autres projets.
-
-
-
-
+ - [ft_lstiter](sources/lst/ft_lstiter.c) : Itère sur la liste ’lst’ et applique la fonction
+’f’ au contenu chaque élément.
+ - [ft_lstmap](sources/lst/ft_lstmap.c) : Itère sur la liste ’lst’ et applique la fonction
+ ’f ’au contenu de chaque élément. Crée une nouvelle
+ liste résultant des applications successives de
+ ’f’. La fonction ’del’ est là pour détruire le
+ contenu d’un élément si nécessaire.
